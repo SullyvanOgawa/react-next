@@ -1,0 +1,14 @@
+/* Tamanho da tela */
+.container{
+    max-width: 98rem;
+}
+
+/* Tamanho da tela */
+.container-fluid{
+    max-width: auto;
+}
+
+/* Conteúdo da tela */
+.content{
+    margin: 3.2rem;
+}
