@@ -1,9 +1,11 @@
-/* Tamanho da tela */
+/* Tamanho delimitado da tela */
 .container{
     max-width: 98rem;
+    margin: 0 auto;
+
 }
 
-/* Tamanho da tela */
+/* Tamanho da tela inteira*/
 .container-fluid{
     max-width: auto;
 }

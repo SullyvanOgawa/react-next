@@ -6,7 +6,7 @@ export function Logo() {
     return (
         <div className={styles.logo}>
             <a  className={styles.logoLink} href="#">
-                <TimerIcon size={32} />
+                <TimerIcon/>
                 <span>Chronos</span>
             </a>
         </div>
