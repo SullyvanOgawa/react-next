@@ -1,21 +1,14 @@
-import { HistoryIcon, HouseIcon, SettingsIcon, SunIcon} from 'lucide-react';
+import { MENU_ITEMS } from '../../Constants/Navigation';
 import styles from './Menu.module.css';
 
 export function Menu() {
   return (
     <nav className={styles.menu}>
-      <a className={styles.menuLink} href=''>
-        <HouseIcon />
-      </a>
-      <a className={styles.menuLink} href=''>
-        <HistoryIcon />
-      </a>
-      <a className={styles.menuLink} href=''>
-        <SettingsIcon />
-      </a>
-      <a className={styles.menuLink} href=''>
-        <SunIcon />
-      </a>
+      {MENU_ITEMS.map(({ id, icons: Icon, path }) => (
+        <a key={id} className={styles.menuLink} href={path}>
+          <Icon/>
+        </a>
+      ))}
     </nav>
   );
 }
