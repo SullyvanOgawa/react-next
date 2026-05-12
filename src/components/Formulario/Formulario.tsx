@@ -20,7 +20,7 @@ export function Formulario() {
       </div>
 
       <div className={styles.forRow}>
-        <DefaultButton icon={<PlayCircleIcon />}/>
+        <DefaultButton icon={<PlayCircleIcon />} />
       </div>
     </form>
   );
