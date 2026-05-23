@@ -17,7 +17,7 @@ export function App() {
   const [numero, setNumero] = useState(0);
 
   function handleClick(){
-    setNumero(numero + 1);
+    setNumero(prevState => prevState + 1); // caso eu queira usar o estado anterior da variável.
   }
 
   return (
