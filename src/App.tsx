@@ -4,29 +4,33 @@ import { Formulario } from './components/Formulario/Formulario';
 import { Footer } from './components/Footer/Footer';
 import { Logo } from './components/Logo/Logo';
 import { Menu } from './components/Menu/Menu';
-// import { Heading } from './components/Heading/Heading';
+import { Heading } from './components/Heading/Heading';
 
 import './styles/global.css';
 import './styles/themes.css';
+import { useState } from 'react';
 
 export function App() {
-  // let number = 0;
-  // function handleClick() {
-  //   number += 1;
-  // }
+  /*O useState é uma função nativa do React que permite adicionar e manipular "estados" (dados dinâmicos) em componentes funcionais. Ele é chamado de hook (termo em inglês que significa "gancho") porque permite que você "prenda" ou "conecte" seus componentes funcionais a recursos avançados do React, como o gerenciamento de estado e o ciclo de vida.*/
+  // Sempre qur usar UseState, não vou usar atribuição deiretamente. Ex.: numero +=1;
+ 
+  const [numero, setNumero] = useState(0);
 
-  
+  function handleClick(){
+    setNumero(numero + 1);
+  }
+
   return (
     <>
-      {/* <Heading>Número: {number}</Heading> */}
-      {/* <button onClick={handleClick}></button> */}
+      <Heading>Número: {numero}</Heading>
+      <button onClick={handleClick}></button>
       <Container>
         <Logo />
       </Container>
 
       <Container>
         <Menu />
-      </Container>
+      </Container> 
 
       <Container>
         <CountDown />
