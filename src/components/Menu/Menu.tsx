@@ -4,7 +4,13 @@ import { useState, useEffect } from 'react';
 
 type AvailableThemes = 'dark' | 'light';
 export function Menu() {
-  const [theme, setTheme] = useState<AvailableThemes>('dark');
+  const [theme, setTheme] = useState<AvailableThemes>(() => {
+    // Tenta obter o tema armazenado no localStorage e converte para AvailableThemes ou dark por padrão, caso não tenha nada no localStorage.
+    const storedTheme = (localStorage.getItem('theme') as AvailableThemes) || 'dark';
+    
+    return storedTheme;
+  });
+
 
   // handleThemeChange é uma funcao que recebe um evento como argumento e retorna um valor ou undefined.
   // Uma função handle (ou manipulador de eventos) é uma função JavaScript/TypeScript executada em resposta a interações do usuário, como cliques em botões, digitação em campos de texto ou envios de formulários.
@@ -25,6 +31,7 @@ export function Menu() {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
   }, [theme]); // Executa o useEffect sempre ou somente quando o tema mudar.
 
   return (
