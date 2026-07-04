@@ -3,6 +3,7 @@ import { Cycles } from '../Cycles/Cycles';
 import { DefaultButton } from '../DefaultButtton/DefaultButton';
 import { DefaultInput } from '../DefaultInput/DefaultInput';
 import styles from './Formulario.module.css';
+
 export function Formulario() {
   return (
     <form className={styles.formContainer} action=''>

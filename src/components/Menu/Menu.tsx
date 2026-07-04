@@ -1,4 +1,4 @@
-import { HistoryIcon, HouseIcon, SettingsIcon, SunIcon } from 'lucide-react';
+import { HistoryIcon, HouseIcon, MoonIcon, SettingsIcon, SunIcon } from 'lucide-react';
 import styles from './Menu.module.css';
 import { useState, useEffect } from 'react';
 
@@ -11,7 +11,10 @@ export function Menu() {
     return storedTheme;
   });
 
-
+  const nextThemeIcon = {
+    dark: <SunIcon />,
+    light: <MoonIcon />,
+  }
   // handleThemeChange é uma funcao que recebe um evento como argumento e retorna um valor ou undefined.
   // Uma função handle (ou manipulador de eventos) é uma função JavaScript/TypeScript executada em resposta a interações do usuário, como cliques em botões, digitação em campos de texto ou envios de formulários.
 
@@ -63,7 +66,7 @@ export function Menu() {
         title='theme'
         onClick={handleThemeChange}
       >
-        <SunIcon />
+        {nextThemeIcon[theme]}
       </a>
     </nav>
   );
