@@ -9,3 +9,5 @@ export type TaskModel = {
   interruptedDate: number | null; // quando a tarefa for interrompida, o interruptedDate vai receber a data de interrupção. Caso contrário, ele será nulo.
   type: keyof TaskStateModel['config']; // o type vai indicar se a tarefa é de trabalho, de intervalo curto ou de intervalo longo.
 };
+
+
