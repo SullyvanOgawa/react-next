@@ -5,6 +5,7 @@ import { MainTemplate } from "../../templates/MainTemplates/MainTemplate";
 
 
 export function Home() {
+  
     return (
         <>
           

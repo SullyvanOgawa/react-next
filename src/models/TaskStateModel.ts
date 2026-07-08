@@ -4,7 +4,7 @@ import type { TaskModel } from "./TaskModel";
 
 
 export type TaskStateModel = {
-    tasks: TaskModel[]; // array de tarefas
+    tasks: TaskModel[]; // array de tarefas, histórico, Formulario
     secondsRemaining: number; // segundos restantes da tarefa atual
     formattedSecondsRemaining: string; // segundos restantes formatados (ex: 00:00)
     activeTask: TaskModel | null; // tarefa ativa (a que está sendo executada no momento)
@@ -13,5 +13,5 @@ export type TaskStateModel = {
         workTime: number; // tempo de trabalho em segundos
         shortBreakTime: number; // tempo de intervalo curto em segundos
         longBreakTime: number; // tempo de intervalo longo em segundos
-    };
+    }
 }
