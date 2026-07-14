@@ -6,7 +6,7 @@ type TaskProviderProps = {
     children: React.ReactNode;
 }
 
-export function TaskProvider({ children }: TaskProviderProps) {
+export function TaskContextProvider({ children }: TaskProviderProps) {
     const [state, setState] = useState(initialTaskState);
 
     return (

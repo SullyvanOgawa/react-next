@@ -1,6 +1,6 @@
 import  { Container } from "../../components/Container/Container";
 import { CountDown } from "../../components/CountDown/CountDown";
-import { Formulario } from "../../components/Formulario/Formulario";
+import { Formulario } from "../../components/MainForm/Formulario";
 import { MainTemplate } from "../../templates/MainTemplates/MainTemplate";
 
 
